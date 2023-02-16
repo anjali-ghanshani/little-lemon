@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       Little Lemon restaurant
+      Reserve a table now!
     </div>
   );
 }
