@@ -2,7 +2,12 @@ import React from 'react'
 
 function Main() {
     return (
-        <div>Main</div>
+        <main>
+            <div>Hero</div>
+            <div></div>
+            <div></div>
+
+        </main>
     )
 }
 
