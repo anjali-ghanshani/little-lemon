@@ -1,0 +1,21 @@
+.footer {
+    background-color: #F4CE14;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.footer__section {
+    display: flex;
+    list-style-type: none;
+}
+
+.footer__logo {
+    width: 200px;
+    height: 50px;
+}
+
+.doormat_nav {
+    margin-left: 1rem;
+    padding: 1rem;
+}

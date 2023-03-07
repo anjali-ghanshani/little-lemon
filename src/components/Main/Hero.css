@@ -1,0 +1,43 @@
+.hero {
+    background-color: #495E57;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero_left {
+    justify-content: space-between;    
+}
+.rest_name {
+    color: #F4CE14;
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+.rest_location {
+ color: white;
+ margin-top: 0;
+}
+.rest_description {
+    color: white;
+    width: 16.25rem;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 4rem;
+}
+
+.cta {
+    width: 14.125rem;
+    height: 3.4375rem;
+    
+    background: #F4CE14;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5.25rem;
+    
+}
+
+.rest_image {
+    width: 23.5rem;
+    height: 25.625rem;
+    border-radius: 2rem;
+}
