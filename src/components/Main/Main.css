@@ -1,15 +1,30 @@
+.list-type {
+
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  /* width: 100%; */
+
+}
+
 .dish-card {
   background-color: #EDEFEE;
-  display: inline-block;
-  /* margin: 1rem; */
+  width: 18%;
+  border-radius: .625rem;
+  flex-direction: column;
+  
+}
+
+.dish-image {
+  height: 8rem;
+  width: 100%;
   border-radius: .625rem;
 }
 
-
-.dish-image {
-  height: 100px;
-  width: 150px;
-  border-radius: .625rem;
+.dish-name, .dish-description {
+  padding: 0 20px;
 }
 
 .testimonials {
@@ -19,22 +34,16 @@
 
 .testimonial-card {
   background-color: #EE9972;
-  display: inline-block;
-  margin: 1rem;
+  display: flex;
+  /* margin: 1rem; */
+  width: 20%;
   border-radius: 10px;
   transition: 0.3s;
+  flex-direction: column;
 
 }
 
-.list-type {
 
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px;
-
-
-}
 
   /* On mouse-over, add a deeper shadow */
   .testimonial-slide:hover {

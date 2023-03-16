@@ -14,6 +14,7 @@ function Main() {
             <Hero />
             {/* <div>Features</div> */}
             <section className='features'>
+                <h1 className='heading'>Specials</h1>
                 <ul className="list-type">
                     <li className="dish-card">
                         <img className='dish-image' src={dish1} alt='Greek Salad' />
