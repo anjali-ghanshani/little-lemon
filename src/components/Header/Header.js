@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import Reservations from '../Reservations'
+import BookingPage from '../BookingPage/BookingPage'
 import { Routes, Route, Link } from "react-router-dom"
 
 function Header() {
@@ -27,7 +27,7 @@ function Header() {
                 </nav>
 
                 <Routes>
-                    <Route path='/reservations' element={<Reservations />} />
+                    <Route path='/reservations' element={<BookingPage />} />
                 </Routes>
 
             </div>

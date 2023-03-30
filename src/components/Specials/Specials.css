@@ -1,0 +1,95 @@
+
+
+.specials {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .dish-card {
+    --padding: 1rem;
+    background-color: #EDEFEE;
+    overflow: hidden;
+    border: 1px solid #777;
+    border-radius: .25rem;
+    /* margin: 1em; */
+    /* max-width: 300px; */
+  }
+  
+  .dish-card.card-shadow { /* to select dish cards which have card shadow inside of them*/
+    border: none;
+    box-shadow: 0 2px 5px grey;
+  }
+  
+  
+  
+  .card-header img {
+    display: block; /* to be able to set width and height*/
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16 / 12;
+    object-fit: cover; /* so that aspect ratio of image is always maintainedn and does not distort or strech the image*/
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+  }
+  
+  .dish-card:hover img{
+    transform: scale(1.025);
+  }
+  
+  .card-name {
+    padding: var(--padding);
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  
+  p {
+    overflow: hidden;
+    white-space: wrap;
+  }
+  .card-body {
+    text-overflow: ellipsis;
+    padding: 0 var(--padding);
+    font-size: .9rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    padding: var(--padding);
+    padding-top: 0;
+  }
+  
+  .btn {
+    --color: #495e57;
+    background: var(--color);
+    color: #f4ce14;
+    border: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+  }
+  
+  .btn:hover, .btn:focus {
+    background: #6a897f;
+  }
+  
+  .btn.btn-outline {
+    background: #f4ce14;
+    border: 0px solid var(--color);
+    color: var(--color);
+  }
+  
+  .btn.btn-outline:hover , .btn.btn-outline:focus {
+    background: #f7d940;
+  }
+  
+  .btn + .btn {
+    margin-left: .5rem;
+  }
+  
+  
