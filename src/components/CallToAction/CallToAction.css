@@ -1,0 +1,124 @@
+.hero {
+    background-color: #495E57;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.title {
+    color: #F4CE14;
+    font-weight: 500;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.subtitle {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+
+}
+
+.rest_description {
+    color: white;
+    font-size: 1.8em;
+    width: 10em;
+    margin-bottom: 2em;
+}
+
+.hero .call_to_action {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 3rem;
+    align-self: center;
+}
+
+
+.button {
+    background-color: #F4CE14;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 1em;
+    text-decoration: none;
+    font-size: 1.5rem ;
+}
+
+.hero .image_wrapper {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    border: #F4CE14;
+}
+
+.hero .food_image {
+    background-image: url(../restaurant_images/restauranfood.jpg);
+    flex-grow: 1;
+    max-height: 70vh;
+    min-width: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+@media (max-width: 800px) {
+    .hero .image_wrapper {
+        display: none;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+}
+/* 
+.hero_left {
+    justify-content: space-between;    
+}
+.rest_name {
+    color: #F4CE14;
+    font-weight: 500;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.rest_location {
+ color: white;
+ margin-top: 0;
+}
+.rest_description {
+    color: white;
+    width: 16.25em;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-top: 4rem;
+}
+
+.cta {
+    width: 14.125rem;
+    height: 3.4375rem;
+    background: #F4CE14;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5.25rem;
+    transition: ease-in-out;
+}
+
+.cta:hover {
+    box-shadow: 10px 5px 5px black;
+}
+
+.hero_right s.rest_image {
+    display: flex;
+    width: 23.5rem;
+    height: 22rem;
+    border-radius: 2em;
+    flex-grow: 1;
+}
+ */

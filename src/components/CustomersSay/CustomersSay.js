@@ -1,40 +1,13 @@
 import React from 'react'
-import './Main.css'
+import './CustomersSay.css'
 import reviewerImage1 from '../../testimonial-images/reviewer1.jpg';
 import reviewerImage2 from '../../testimonial-images/reviewer2.jpg';
 import reviewerImage3 from '../../testimonial-images/reviewer3.jpg';
 import reviewerImage4 from '../../testimonial-images/reviewer4.jpg';
-import dish1 from '../../testimonial-images/greek_salad.jpg';
-import dish2 from '../../testimonial-images/bruchetta.jpg';
-import dish3 from '../../testimonial-images/lemon_dessert.jpg';
-import Hero from './Hero.js'
-function Main() {
+
+function CustomersSay() {
     return (
-        <main>
-            <Hero />
-            {/* <div>Features</div> */}
-            <section className='features'>
-                <ul className="list-type">
-                    <li className="dish-card">
-                        <img className='dish-image' src={dish1} alt='Greek Salad' />
-                        <h6 className="dish-name">Greek Salad</h6>
-                        <p className="dish-description">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-                    </li>
-                    <li className="dish-card">
-                        <img className='dish-image' src={dish2} alt='Bruschetta' />
-                        <h6 className="dish-name">Bruschetta</h6>
-                        <p className="dish-description">Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Toppings of tomato, veggies, beans, cured pork, or cheese are examples of variations. In Italy, a brustolina grill is frequently used to create bruschetta. </p>
-                    </li>
-                    <li className="dish-card">
-                        <img className='dish-image' src={dish3} alt='Lemon Dessert' />
-                        <h6 className="dish-name">Lemon Dessert</h6>
-                        <p className="dish-description">Lemon Desserts are the perfect way to celebrate summer with food!</p>
-                    </li>
-
-                </ul>
-            </section>
-
-            {/* <div>Testimonials</div> */}
+        <>
             <section className='testimonials' >
                 <h2>Testimonials</h2>
 
@@ -69,11 +42,8 @@ function Main() {
                     </li>
                 </ul>
             </section>
-
-            {/* <div>About the restaurant</div> */}
-
-        </main>
+        </>
     )
 }
 
-export default Main
+export default CustomersSay
