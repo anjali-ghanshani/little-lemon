@@ -9,7 +9,7 @@ function CustomersSay() {
     return (
         <>
             <section className='testimonials' >
-                <h2>Testimonials</h2>
+                <h1>Testimonials</h1>
 
                 <ul className='list-type'>
                     <li className='testimonial-card'>

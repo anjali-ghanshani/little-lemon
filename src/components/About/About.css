@@ -1,0 +1,18 @@
+.image-wraper {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+
+}
+
+.restaurant-imageA {
+    background-image: url(../restaurant_images/MarioAndAdrianA.jpg);
+    /* flex-grow: 1;
+    max-height: 70vh;
+    min-width: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center; */
+
+}
