@@ -10,14 +10,8 @@ function App() {
   return (
     <>
       <Header />
-      <CallToAction />
-      {/* HomePage */}
-      <Specials />
-      <CustomersSay />
-      {/* Chicago */}
-      <BookingPage />
-
       <Footer />
+
     </>
   );
 }

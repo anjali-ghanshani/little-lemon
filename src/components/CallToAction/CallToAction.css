@@ -46,6 +46,12 @@
     border-radius: 1em;
     text-decoration: none;
     font-size: 1.5rem ;
+    cursor: pointer;
+    transition: box-shadow 500ms;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 5px rgb(65, 65, 65);
 }
 
 .hero .image_wrapper {

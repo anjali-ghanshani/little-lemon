@@ -44,6 +44,7 @@ nav {
 #nav_logo {
     width: 100%;
     height: 3rem;
+    cursor: pointer;
 }
 
 .toggle-button {
@@ -55,6 +56,7 @@ nav {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  
 }
 
 @media (max-width: 800px) {

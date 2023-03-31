@@ -2,7 +2,8 @@ import React from 'react'
 
 function BookingPage() {
     return (
-        <div>BookingPage</div>
+        <div><h1>BookingPage</h1>
+        </div>
     )
 }
 

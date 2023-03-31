@@ -6,7 +6,7 @@ import dish3 from '../../testimonial-images/lemon_dessert.jpg';
 function Specials() {
     return (
         <>
-            <div className='specials_heading'> Specials </div>
+            <h1 > Specials </h1>
             <div className='specials'>
 
                 <div className='dish-card card-shadow'>
