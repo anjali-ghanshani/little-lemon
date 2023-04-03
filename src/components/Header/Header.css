@@ -1,23 +1,11 @@
 nav {
-    /* background-color: #495E57; */
+    background-color: #F4CE14;
     display: flex;
     align-items: center;
     padding: 20px 50px;
     justify-content: space-between;
   }
 
-  /* .list {
-    justify-content: flex-end;
-
-  }
-  .list li {
-    
-    list-style-type: none;
-    display: inline-block;
-    padding: 0 20px;
-    text-decoration: none;
-    cursor: pointer;
-  } */
 
 .list ul {
   margin: 0;
