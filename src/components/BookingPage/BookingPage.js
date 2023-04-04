@@ -3,11 +3,11 @@ import { useState } from "react";
 import { validateEmail, validateNumberOfDinners } from "../../utlis";
 import "./BookingPage.css"
 
-const PasswordErrorMessage = () => {
-    return (
-        <p className="FieldError">Password should have at least 8 characters</p>
-    );
-};
+// const PasswordErrorMessage = () => {
+//     return (
+//         <p className="FieldError">Password should have at least 8 characters</p>
+//     );
+// };
 
 
 function BookingPage() {
@@ -146,7 +146,7 @@ function BookingPage() {
 
                             </select>
                         </div>
-                        <button type="submit" disabled={!getIsFormValid()}>
+                        <button class="Button" type="submit" disabled={!getIsFormValid()}>
                             reserve the table
                         </button>
                     </fieldset>
