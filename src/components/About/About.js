@@ -1,18 +1,19 @@
 import React from 'react'
 import './About.css'
-import aboutImage from '../restaurant_images/MarioAndAdrianA.jpg'
+import aboutImage1 from '../restaurant_images/MarioAndAdrianA.jpg';
+import aboutImage2 from '../restaurant_images/MarioAndAdrianB.jpg';
 function About() {
     return (
         <>
-            <div>
+            <div className='about'>
                 <h1>About</h1>
-                <p>Mauris feugiat mauris fermentum lorem imperdiet sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ac vehicula erat, non sollicitudin tortor. Donec sit amet enim massa. Sed neque enim, feugiat ac varius sed, iaculis non nunc. Aenean non leo vel felis vulputate tincidunt quis ac ante.</p>
-            </div>
-            <div className='image-wraper'>
+                <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</p>
+                <div className='restaurant-image-wrapper'>
+                    <img src={aboutImage1} className='restaurant-imageA'></img>
+                    <img src={aboutImage2} className='restaurant-imageA'></img>
 
-                <div className='restaurant-imageA'></div>
+                </div>
             </div>
-            <h1>There</h1>
         </>
     )
 }

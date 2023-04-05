@@ -1,18 +1,25 @@
-/* .image-wraper {
-    flex-grow: 1;
-    flex-direction: column;
+.about {
+    /* background-color: #FBDABB ; */
+    display: grid;
+    
+    justify-content: center;
+   
+
+}
+
+.restaurant-image-wrapper {
     display: flex;
-    align-items: stretch;
-
-} */
-
-.image-wraper {
-    background-image: url(../restaurant_images/restaurant.jpg);
-    flex: 1;
-    max-height: 70vh;
+    flex-direction: row;
+   
+   
+}
+ .restaurant-imageA {
+    margin: 1rem;
+    max-height: 50vh;
     min-width: 40vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
+    border-radius: 10px;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
 
 }
