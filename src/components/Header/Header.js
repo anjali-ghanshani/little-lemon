@@ -10,36 +10,32 @@ import CustomersSay from '../CustomersSay/CustomersSay'
 function Header() {
     return (
         <header>
-            <div>
-                <nav className='list'>
-                    <div >
-                        <Link to="/">
-                            <img id='nav_logo' src='http://jordanbr.pythonanywhere.com/static/restaurant/img/logo.png' alt='lttle-lemon-logo' />
-                        </Link>
-                    </div>
-                    <ul >
-                        <li><Link to="/about">About</Link></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><Link to="/reservations">Reservations</Link></li>
-                        <li><a href="#">Order Online</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
+            <nav className='list'>
+                <Link to="/">
+                    <img id='nav_logo' src='http://jordanbr.pythonanywhere.com/static/restaurant/img/logo.png' alt='lttle-lemon-logo' />
+                </Link>
+                <ul >
+                    <li><Link to="/about">About</Link></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><Link to="/reservations">Reservations</Link></li>
+                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
 
-                <Routes>
-                    <Route path='/' element={
-                        <main>
-                            <CallToAction />
-                            <Specials />
-                            <CustomersSay />
-                        </main>
-                    }
-                    />
-                    <Route path='/reservations' element={<BookingPage />} />
-                    <Route path='/about' element={<About />} />
-                </Routes>
+            <Routes>
+                <Route path='/' element={
+                    <main>
+                        <CallToAction />
+                        <Specials />
+                        <CustomersSay />
+                    </main>
+                }
+                />
+                <Route path='/reservations' element={<BookingPage />} />
+                <Route path='/about' element={<About />} />
+            </Routes>
 
-            </div>
         </header>
     )
 }

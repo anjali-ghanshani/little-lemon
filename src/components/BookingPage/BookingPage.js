@@ -146,7 +146,7 @@ function BookingPage() {
 
                             </select>
                         </div>
-                        <button class="Button" type="submit" disabled={!getIsFormValid()}>
+                        <button className="Button" type="submit" disabled={!getIsFormValid()}>
                             reserve the table
                         </button>
                     </fieldset>

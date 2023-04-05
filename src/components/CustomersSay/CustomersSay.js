@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CustomersSay.css'
 import reviewerImage1 from '../../testimonial-images/reviewer1.jpg';
 import reviewerImage2 from '../../testimonial-images/reviewer2.jpg';
