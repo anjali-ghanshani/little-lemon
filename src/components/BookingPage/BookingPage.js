@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { validateEmail, validateNumberOfDinners } from "../../utlis";
+import { validateDate, validateEmail, validateNumberOfDinners } from "../../utlis";
 import "./BookingPage.css"
 
 const PasswordErrorMessage = () => {
@@ -15,18 +15,19 @@ function BookingPage() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [numberOfDinners, setNumberofDinners] = useState("")
-    const [dateAndTime, setDateAndTime] = useState("")
+    const [date, setDate] = useState("")
+    const [time, setTime] = useState("")
     // const [password, setPassword] = useState({
     //     value: "",
     //     isTouched: false,
     // });
     const [occasion, setOccasion] = useState("occasion");
-
     const getIsFormValid = () => {
         return (
             firstName &&
             validateEmail(email) &&
-            validateNumberOfDinners(numberOfDinners)
+            validateNumberOfDinners(numberOfDinners) &&
+            validateDate(date)
             // &&
             // password.value.length >= 8 &&
             // role !== "role"
@@ -58,10 +59,11 @@ function BookingPage() {
                     <fieldset>
                         <h1 className='booking-heading'>Make the table reservation(s) here:</h1>
                         <div className='Field'>
-                            <label>
+                            <label htmlFor='firstName'>
                                 First name <sup>*</sup>
                             </label>
                             <input
+                                id='firstName'
                                 value={firstName}
                                 onChange={(e) => {
                                     setFirstName(e.target.value);
@@ -70,8 +72,9 @@ function BookingPage() {
                             />
                         </div>
                         <div className="Field">
-                            <label>Last name</label>
+                            <label htmlFor='lastName'>Last name</label>
                             <input
+                                id='lastName'
                                 value={lastName}
                                 onChange={(e) => {
                                     setLastName(e.target.value);
@@ -80,10 +83,11 @@ function BookingPage() {
                             />
                         </div>
                         <div className="Field">
-                            <label>
+                            <label htmlFor='email'>
                                 Email address <sup>*</sup>
                             </label>
                             <input
+                                id='email'
                                 value={email}
                                 onChange={(e) => {
                                     setEmail(e.target.value);
@@ -92,23 +96,50 @@ function BookingPage() {
                             />
                         </div>
                         <div className="Field" >
-                            <label>
-                                Date and time of reservation <sup>*</sup>
+                            <label htmlFor='date'>
+                                Date <sup>*</sup>
                             </label>
 
                             <input
-                                value={dateAndTime}
+                                id='date'
+                                // min={getToday()}
+                                value={date}
+                                type='date'
                                 onChange={(e) => {
-                                    setDateAndTime(e.target.value);
+                                    setDate(e.target.value);
                                 }}
-                                placeholder="dd/mm/yyyy" />
+                            />
+                        </div>
+                        <div className="Field" >
+                            <label htmlFor='time'>
+                                Time <sup>*</sup>
+                            </label>
+
+                            <select
+                                id='time'
+                                value={time}
+                                type='time'
+                                onChange={(e) => {
+                                    setTime(e.target.value);
+                                }}
+                            >
+                                <option>5:00 pm</option>
+                                <option>6:00 pm</option>
+                                <option>7:00 pm</option>
+                                <option>8:00 pm</option>
+                                <option>9:00 pm</option>
+                                <option>10:00 pm</option>
+                            </select>
                         </div>
                         <div className="Field">
-                            <label>
+                            <label htmlFor='numberOfDinners'>
                                 Number of Dinners <sup>*</sup>
                             </label>
                             <input
+                                id='numberOfDinners'
                                 value={numberOfDinners}
+                                min='1'
+                                max='10'
                                 onChange={(e) => {
                                     setNumberofDinners(e.target.value);
                                 }}
@@ -135,10 +166,10 @@ function BookingPage() {
                             ) : null}
                         </div> */}
                         <div className="Field">
-                            <label>
-                                Occasion <sup>*</sup>
+                            <label htmlFor='occasion'>
+                                Occasion
                             </label>
-                            <select value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                            <select id='occasion' value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                                 <option value="occasion">Occasion</option>
                                 <option value="birthday">Birthday</option>
                                 <option value="engagement">Engagement</option>

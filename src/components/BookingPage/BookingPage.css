@@ -9,6 +9,7 @@
     height: 80vh;
     justify-content: center;
     padding-top: 5rem;
+    padding-bottom: 5rem;
 
 }
 
@@ -81,7 +82,7 @@
     border-radius: 8px;
     border: 1px solid #ccc;
     background-color: #F4CE14;
-    color: #666666;
+    color: black;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;

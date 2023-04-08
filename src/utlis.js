@@ -9,3 +9,10 @@ export const validateEmail = (email) => {
 export const validateNumberOfDinners = (numberOfDinners) => {
     return Number(numberOfDinners) > 0;
 }
+
+export const validateDate = (date) => {
+    const todayDate = new Date()
+    const enteredDate = new Date(date)
+    return enteredDate.getDate() >= todayDate.getDate()
+
+}
