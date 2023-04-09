@@ -75,8 +75,8 @@
     flex-direction: row;
   }
   
-  button {
-    margin: 2rem 1rem;
+  .booking-button {
+    margin: .5rem 10rem;
     padding: 12px;
     width: 240px;
     border-radius: 8px;
@@ -91,12 +91,12 @@
     
   }
 
-  button:hover {
+  .booking-button:hover {
     box-shadow: 5px 5px 5px rgb(65, 65, 65);
 }
   
-  button:disabled,
-  button[disabled] {
+  .booking-button:disabled,
+  .booking-button[disabled] {
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;

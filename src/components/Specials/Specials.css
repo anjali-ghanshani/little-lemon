@@ -42,7 +42,7 @@
   .card-name {
     padding: var(--padding);
     font-size: 1.2rem;
-    margin-bottom: .5rem;
+    /* margin-bottom: .5rem; */
   }
   
   p {

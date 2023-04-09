@@ -3,24 +3,22 @@ import { useState } from "react";
 import { validateDate, validateEmail, validateNumberOfDinners } from "../../utlis";
 import "./BookingPage.css"
 
-const PasswordErrorMessage = () => {
-    return (
-        <p className="FieldError">Password should have at least 8 characters</p>
-    );
-};
-
-
 function BookingPage() {
+
+    const availableTimes = [
+        "5:00 pm",
+        "6:00 pm",
+        "7:00 pm",
+        "8:00 pm",
+        "9:00 pm",
+        "10:00 pm",
+    ]
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [numberOfDinners, setNumberofDinners] = useState("")
     const [date, setDate] = useState("")
-    const [time, setTime] = useState("")
-    // const [password, setPassword] = useState({
-    //     value: "",
-    //     isTouched: false,
-    // });
+    const [times, setTimes] = useState(availableTimes)
     const [occasion, setOccasion] = useState("occasion");
     const getIsFormValid = () => {
         return (
@@ -28,9 +26,6 @@ function BookingPage() {
             validateEmail(email) &&
             validateNumberOfDinners(numberOfDinners) &&
             validateDate(date)
-            // &&
-            // password.value.length >= 8 &&
-            // role !== "role"
         );
     };
 
@@ -40,11 +35,6 @@ function BookingPage() {
         setEmail("");
         setNumberofDinners("")
         setOccasion("occasion")
-        // setPassword({
-        //     value: "",
-        //     isTouched: false,
-        // });
-
     };
 
     const handleSubmit = (e) => {
@@ -102,7 +92,6 @@ function BookingPage() {
 
                             <input
                                 id='date'
-                                // min={getToday()}
                                 value={date}
                                 type='date'
                                 onChange={(e) => {
@@ -114,21 +103,19 @@ function BookingPage() {
                             <label htmlFor='time'>
                                 Time <sup>*</sup>
                             </label>
-
                             <select
                                 id='time'
-                                value={time}
+                                value={times.time}
                                 type='time'
-                                onChange={(e) => {
-                                    setTime(e.target.value);
-                                }}
+                            // onChange={(e) => {
+                            //     setTimes(e.target.value);
+                            // }}
+
                             >
-                                <option>5:00 pm</option>
-                                <option>6:00 pm</option>
-                                <option>7:00 pm</option>
-                                <option>8:00 pm</option>
-                                <option>9:00 pm</option>
-                                <option>10:00 pm</option>
+                                {times.map(time => {
+                                    return <option key={times.time}>{time}</option>
+
+                                })}
                             </select>
                         </div>
                         <div className="Field">
@@ -146,25 +133,6 @@ function BookingPage() {
                                 placeholder="Number of dinners"
                             />
                         </div>
-                        {/* <div className="Field">
-                            <label>
-                                Password <sup>*</sup>
-                            </label>
-                            <input
-                                value={password.value}
-                                type="password"
-                                onChange={(e) => {
-                                    setPassword({ ...password, value: e.target.value });
-                                }}
-                                onBlur={() => {
-                                    setPassword({ ...password, isTouched: true });
-                                }}
-                                placeholder="Password"
-                            />
-                            {password.isTouched && password.value.length < 8 ? (
-                                <PasswordErrorMessage />
-                            ) : null}
-                        </div> */}
                         <div className="Field">
                             <label htmlFor='occasion'>
                                 Occasion
@@ -177,7 +145,7 @@ function BookingPage() {
 
                             </select>
                         </div>
-                        <button type="submit" disabled={!getIsFormValid()}>
+                        <button className='booking-button' type="submit" disabled={!getIsFormValid()}>
                             reserve the table
                         </button>
                     </fieldset>
