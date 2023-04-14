@@ -2,20 +2,9 @@ import React, { useReducer } from 'react'
 import BookingForm from './BookingForm/BookingForm';
 import "./BookingPage.css"
 import BookingSlot from './BookingSlot/BookingSlot';
-import { fetchAPI } from './api.js'
+import { fetchAPI } from '../../api/api.js'
 
 
-
-
-// const availableTimes = [
-//     "select",
-//     "5:00 pm",
-//     "6:00 pm",
-//     "7:00 pm",
-//     "8:00 pm",
-//     "9:00 pm",
-//     "10:00 pm",
-// ]
 
 
 const initializeTimes = function () {
@@ -46,3 +35,5 @@ function BookingPage() {
 }
 
 export default BookingPage
+
+export { updateTimes, initializeTimes }

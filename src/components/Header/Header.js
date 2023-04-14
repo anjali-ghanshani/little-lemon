@@ -32,7 +32,7 @@ function Header() {
                     </main>
                 }
                 />
-                <Route path='/reservations' element={<BookingPage />} />
+                <Route path='/reservations' element={<BookingPage aria-label="On Click" />} />
                 <Route path='/about' element={<About />} />
             </Routes>
 

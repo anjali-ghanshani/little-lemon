@@ -39,7 +39,7 @@ function BookingForm({ availableTimes, dispatch }) {
     return (
         <div className='booking-page'>
             <div className='booking-form'>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} aria-labe="Make the table reservation(s) here:">
                     <fieldset>
                         <h1 className='booking-heading'>Make the table reservation(s) here:</h1>
                         <div className='Field'>
