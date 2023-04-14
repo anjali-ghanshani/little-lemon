@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 import BookingForm from './BookingForm/BookingForm';
 import "./BookingPage.css"
-import BookingSlot from './BookingSlot/BookingSlot';
 import { fetchAPI } from '../../api/api.js'
 
 
@@ -29,7 +28,6 @@ function BookingPage() {
     return (
         <>
             <BookingForm availableTimes={availableTimes.availableTimes} dispatch={dispatch} />
-            <BookingSlot />
         </>
     )
 }

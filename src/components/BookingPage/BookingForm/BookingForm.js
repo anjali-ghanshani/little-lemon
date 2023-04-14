@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { validateDate, validateEmail, validateNumberOfDinners } from "../../../utlis";
 import "./BookingForm.css"
 
@@ -11,7 +12,7 @@ function BookingForm({ availableTimes, dispatch }) {
     const [numberOfDinners, setNumberofDinners] = useState("")
     const [date, setDate] = useState("")
     const [occasion, setOccasion] = useState("occasion");
-
+    const navigate = useNavigate()
     const getIsFormValid = () => {
         return (
             firstName &&
@@ -32,6 +33,7 @@ function BookingForm({ availableTimes, dispatch }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert("Reservation(s) confirmed!");
+        navigate("/confirmed-booking")
         clearForm();
     };
 
@@ -39,7 +41,7 @@ function BookingForm({ availableTimes, dispatch }) {
     return (
         <div className='booking-page'>
             <div className='booking-form'>
-                <form onSubmit={handleSubmit} aria-labe="Make the table reservation(s) here:">
+                <form onSubmit={handleSubmit} aria-label="Make the table reservation(s) here:">
                     <fieldset>
                         <h1 className='booking-heading'>Make the table reservation(s) here:</h1>
                         <div className='Field'>

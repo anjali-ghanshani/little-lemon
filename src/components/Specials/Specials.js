@@ -6,7 +6,7 @@ import dish3 from '../../testimonial-images/lemon_dessert.jpg';
 function Specials() {
     return (
         <>
-            <h1 > Specials </h1>
+            <h1 style={{ margin: '1rem 6rem' }}> Specials </h1>
             <div className='specials'>
 
                 <div className='dish-card card-shadow'>

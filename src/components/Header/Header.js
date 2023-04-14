@@ -6,6 +6,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import CallToAction from '../CallToAction/CallToAction'
 import Specials from '../Specials/Specials'
 import CustomersSay from '../CustomersSay/CustomersSay'
+import ConfirmedBooking from '../ConfirmedBooking/ConfirmedBooking'
 
 function Header() {
     return (
@@ -34,6 +35,7 @@ function Header() {
                 />
                 <Route path='/reservations' element={<BookingPage aria-label="On Click" />} />
                 <Route path='/about' element={<About />} />
+                <Route path="/confirmed-booking" element={<ConfirmedBooking />}></Route>
             </Routes>
 
         </header>
